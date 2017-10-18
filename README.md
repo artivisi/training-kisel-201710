@@ -65,3 +65,24 @@ Contoh data yang ingin dikirim:
 ```
 00720200622000000080100012345678876543210000101018095000000001ATM00010123456
 ```
+
+## Perhitungan Network Byte Order ##
+
+Beberapa switching meminta message length dikirim dengan 2 byte network byte order. Maksudnya adalah 2 byte tersebut dikirim secara `big-endian`. Lebih detail mengenai `big-endian` bisa dibaca [di Wikipedia](https://en.wikipedia.org/wiki/Endianness) dan cara membuatnya bisa dibaca di [StackOverflow](https://stackoverflow.com/a/1992054/855470).
+
+Misalnya, kita punya string sebagai berikut:
+
+```java
+String message = "Hello World";
+```
+
+Maka kita bisa membuat message length dengan network byte order sebagai berikut:
+
+```java
+byte[] nbo = new byte[2];
+byte[0] = (byte) ((message.length() >> 8) & 0xff);
+byte[1] = (byte) (message.length() & 0xff);
+```
+
+Atau bisa juga langsung kita kirim dengan `DataOutputStream.writeShort(message.length());`
+
