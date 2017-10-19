@@ -7,9 +7,6 @@
              realm="xml-server-8000">
         <property name="timeout" value="180000"/>
     </channel>
-    <request-listener class="org.jpos.iso.IncomingListener" logger="Q2" realm="incoming-request-listener">
-        <property name="queue"  value="TXNMGR" />
-        <property name="ctx.DESTINATION"  value="jPOS-AUTORESPONDER" />
-    </request-listener>
+    <request-listener class="id.artivisi.training.kisel.jpos.listener.LogonListener"/>
 </server>
 
