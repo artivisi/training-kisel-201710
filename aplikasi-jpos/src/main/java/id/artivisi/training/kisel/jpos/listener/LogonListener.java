@@ -12,7 +12,11 @@ public class LogonListener implements ISORequestListener {
     public boolean process(ISOSource source, ISOMsg m) {
         try {
             ISOMsg response = (ISOMsg) m.clone();
-            response.setMTI("0810");
+            if("0800".equals(m.getMTI())){
+                response.setMTI("0810");
+            } else if ("0200".equals(m.getMTI())) {
+                response.setMTI("0210");
+            }
             response.set(39,"00");
             source.send(response);
         } catch (ISOException e) {

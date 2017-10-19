@@ -17,3 +17,5 @@
 .gradle
 build
 
+# JPos Ignore
+out
