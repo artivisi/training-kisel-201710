@@ -1,7 +1,7 @@
 <server class="org.jpos.q2.iso.QServer" logger="Q2"
         name="xml-server-8000" realm="xml-server-8000">
     <attr name="port" type="java.lang.Integer">8000</attr>
-    <channel class="org.jpos.iso.channel.ASCIIChannel"
+    <channel class="id.artivisi.training.kisel.jpos.channel.KiselChannel"
              packager="org.jpos.iso.packager.GenericPackager"
              type="server"
              logger="Q2"
