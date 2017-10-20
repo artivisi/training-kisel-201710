@@ -20,9 +20,14 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven { url 'http://jpos.org/maven' }
+    maven { url 'http://download.oracle.com/maven' }
+    mavenLocal()
 }
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.projectlombok:lombok')
+	compile ('org.jpos:jpos:2.1.+')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
