@@ -86,3 +86,6 @@ byte[1] = (byte) (message.length() & 0xff);
 
 Atau bisa juga langsung kita kirim dengan `DataOutputStream.writeShort(message.length());`
 
+## Post Test ##
+
+Silahkan isi test hasil training [di sini](https://goo.gl/forms/FjFE917ZI3IEWae62) :)
