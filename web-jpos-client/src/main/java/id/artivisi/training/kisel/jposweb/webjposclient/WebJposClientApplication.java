@@ -11,7 +11,9 @@ import org.springframework.context.annotation.Bean;
 public class WebJposClientApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WebJposClientApplication.class, args);
+        Q2 q2 = new Q2();
+        q2.start();
+        SpringApplication.run(WebJposClientApplication.class, args);
 	}
 
 	@Bean
