@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<channel-adaptor name='kisel-channel' class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+    <channel class="id.artivisi.training.kisel.jpos.channel.KiselChannel"
+             packager="org.jpos.iso.packager.GenericPackager">
+        <property name="host" value="localhost" />
+        <property name="port" value="8000" />
+        <property name="packager-config" value="cfg/kisel-packager.xml" />
+    </channel>
+    <in>kisel-send</in>
+    <out>kisel-receive</out>
+    <reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>
+

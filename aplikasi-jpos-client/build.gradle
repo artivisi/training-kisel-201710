@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+buildscript {
+    repositories { jcenter() }
+}
+
+group = 'aplikasi-client'
+version = '1.0.0'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'http://jpos.org/maven' }
+    maven { url 'http://download.oracle.com/maven' }
+    mavenLocal()
+}
+
+dependencies {
+    compile ('org.jpos:jpos:2.1.+') {
+        exclude(module: 'junit')
+        exclude(module: 'hamcrest-core')
+    }
+    testCompile 'junit:junit:4.8.2'
+}
+
+apply from: 'jpos-app.gradle'
+

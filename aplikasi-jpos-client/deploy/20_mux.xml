@@ -1,0 +1,5 @@
+<mux class="org.jpos.q2.iso.QMUX" logger="Q2" name="kisel">
+    <in>kisel-receive</in>
+    <out>kisel-send</out>
+    <ready>kisel-channel.ready</ready>
+</mux>
