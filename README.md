@@ -111,6 +111,37 @@ Atau bisa juga langsung kita kirim dengan `DataOutputStream.writeShort(message.l
 
 4. Cek log di server dan response dari http request
 
+
+    ```xml
+    <log realm="xml-server-8000/127.0.0.1:64758" at="2017-10-20T15:45:40.871" lifespan="82294ms">
+      <receive>
+        <isomsg direction="incoming">
+          <!-- org.jpos.iso.packager.GenericPackager[cfg/kisel-packager.xml] -->
+          <field id="0" value="0200"/>
+          <field id="4" value="000000050000"/>
+          <field id="7" value="1020154540"/>
+          <field id="11" value="000123"/>
+          <field id="48" value="08123456787654321"/>
+          <field id="63" value="131001"/>
+        </isomsg>
+      </receive>
+    </log>
+    <log realm="xml-server-8000/127.0.0.1:64758" at="2017-10-20T15:45:40.910" lifespan="7ms">
+      <send>
+        <isomsg direction="outgoing">
+          <!-- org.jpos.iso.packager.GenericPackager[cfg/kisel-packager.xml] -->
+          <field id="0" value="0210"/>
+          <field id="4" value="000000050000"/>
+          <field id="7" value="1020154540"/>
+          <field id="11" value="000123"/>
+          <field id="39" value="00"/>
+          <field id="48" value="08123456787654321"/>
+          <field id="63" value="131001"/>
+        </isomsg>
+      </send>
+    </log>
+    ```
+
 ## Post Test ##
 
 Silahkan isi test hasil training [di sini](https://goo.gl/forms/FjFE917ZI3IEWae62) :)
