@@ -86,6 +86,24 @@ byte[1] = (byte) (message.length() & 0xff);
 
 Atau bisa juga langsung kita kirim dengan `DataOutputStream.writeShort(message.length());`
 
+## Run Web Interface ##
+
+1. Pindah ke folder project
+
+        cd web-jpos-client
+
+2. Jalankan aplikasi
+
+        gradle bootRun
+
+3. Request dengan method `POST` ke `http://localhost:8080/topup` dengan body content berikut
+
+        ```json
+        { "msisdn" : "081234567890123", "nilai" : 50000 }
+        ```
+
+4. Cek log di server dan response dari http request
+
 ## Post Test ##
 
 Silahkan isi test hasil training [di sini](https://goo.gl/forms/FjFE917ZI3IEWae62) :)
