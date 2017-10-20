@@ -98,9 +98,12 @@ Atau bisa juga langsung kita kirim dengan `DataOutputStream.writeShort(message.l
 
 3. Request dengan method `POST` ke `http://localhost:8080/topup` dengan body content berikut
 
-        ```json
-        { "msisdn" : "081234567890123", "nilai" : 50000 }
-        ```
+    ```json
+    { 
+      "msisdn" : "081234567890123", 
+      "nilai" : 50000 
+    }
+    ```
 
 4. Cek log di server dan response dari http request
 
