@@ -105,6 +105,10 @@ Atau bisa juga langsung kita kirim dengan `DataOutputStream.writeShort(message.l
     }
     ```
 
+    Bila dijalankan dengan `curl` perintahnya sebagai berikut:
+
+        curl -d '{ "msisdn" : "08123456787654321", "nilai" : 50000 }' -H 'Content-Type: application/json' http://localhost:8080/topup
+
 4. Cek log di server dan response dari http request
 
 ## Post Test ##
